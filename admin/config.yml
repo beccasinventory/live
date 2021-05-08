@@ -39,6 +39,24 @@ collections:
         fields: 
           - {label: File, name: file, widget: image, media_folder: 'images/'}
           - {label: Caption, name: caption, widget: text, required: false}
+  - name: 'saves'
+    label: 'Saves'
+    folder: 'saves/_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'saves' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {label: Image, name: image, widget: image, media_folder: 'images/'}
+      - {label: Caption, name: caption, widget: text, required: false}
+      - label: "Size"
+        name: "size"
+        widget: "select"
+        options: ["1", "2", "3", "4"]
   - name: 'settings'
     label: 'Settings'
     delete: false # Prevent users from deleting documents in this collection
