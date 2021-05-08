@@ -77,11 +77,10 @@ collections:
       preview: false
     files:
       - name: 'general'
-        label: 'Global'
+        label: 'Home'
         file: '_data/settings.json'
-        description: 'General Site Settings'
         fields:
-          - { label: 'Global title', name: 'site_title', widget: 'string' }
+          - { label: 'Site Title', name: 'site_title', widget: 'string' }
           - label: 'Home Page'
             name: home
             widget: 'object'
