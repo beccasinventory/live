@@ -38,3 +38,4 @@ collections:
         add_to_top: true
         fields: 
           - {label: File, name: file, widget: image}
+          - {label: Caption, name: caption, widget: text, required: false}
