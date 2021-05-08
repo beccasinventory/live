@@ -35,5 +35,6 @@ collections:
       - label: "Images"
         name: "images"
         widget: "list"
+        add_to_top: true
         fields: 
           - {label: File, name: file, widget: image}
