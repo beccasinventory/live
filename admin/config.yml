@@ -35,5 +35,6 @@ collections:
       - label: "Images"
         name: "images"
         widget: "list"
-        field: {label: File, name: file, widget: image}
-        field: {label: Caption, name: caption, widget: text}
+        fields: 
+          - {label: File, name: file, widget: image}
+          - {label: Caption, name: caption, widget: text}
