@@ -5,3 +5,16 @@
     </li>
     {% endfor %}
 </ul>
+
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+    <div class="archive-year">
+        {{ year.name }}
+    </div>
+    {% for post in year.items %}
+    <li class="list-content">
+        <!-- add if post = page -->
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+{% endfor %}
