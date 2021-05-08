@@ -37,4 +37,3 @@ collections:
         widget: "list"
         fields: 
           - {label: File, name: file, widget: image}
-          - {label: Caption, name: caption, widget: text, required: false}
