@@ -32,4 +32,9 @@ collections:
       - { label: 'Category', name: 'category', widget: 'hidden', default: 'camera-roll' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: "Pictures"
+        name: "pictures"
+        widget: "image"
+        media_library:
+          config:
+            multiple: true
