@@ -57,6 +57,18 @@ collections:
         name: "size"
         widget: "select"
         options: ["1", "2", "3", "4"]
+  - name: 'pages'
+    label: 'Pages'
+    editor:
+      preview: false
+    files:
+      - label: 'My Links'
+        name: 'my-links'
+        file: 'my-links.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'my-links' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'page' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'settings'
     label: 'Settings'
     delete: false # Prevent users from deleting documents in this collection
