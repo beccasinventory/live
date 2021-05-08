@@ -77,8 +77,19 @@ collections:
       preview: false
     files:
       - name: 'general'
-        label: 'Site Settings'
+        label: 'Global'
         file: '_data/settings.json'
         description: 'General Site Settings'
         fields:
           - { label: 'Global title', name: 'site_title', widget: 'string' }
+          - label: 'Home Page'
+            name: home
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Cover Image',
+                  name: cover,
+                  widget: image,
+                  required: false,
+                }
+              - { label: 'Special', name: special, widget: 'code', required: false }
