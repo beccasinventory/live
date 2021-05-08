@@ -66,7 +66,7 @@ collections:
         name: 'my-links'
         file: 'my-links.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'my-links' }
+          - { label: 'Title', name: 'title', default: 'my-links' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'page' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'settings'
