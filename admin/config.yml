@@ -32,9 +32,9 @@ collections:
       - { label: 'Category', name: 'category', widget: 'hidden', default: 'camera-roll' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - label: "Images"
-        name: "images"
-        widget: "list"
+      - label: 'Images'
+        name: 'images'
+        widget: 'list'
         add_to_top: true
         fields: 
           - {label: File, name: file, widget: image, media_folder: 'images/'}
@@ -53,10 +53,10 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {label: Image, name: image, widget: image, media_folder: 'images/'}
       - {label: Caption, name: caption, widget: text, required: false}
-      - label: "Size"
-        name: "size"
-        widget: "select"
-        options: ["1", "2", "3", "4"]
+      - label: 'Size'
+        name: 'size'
+        widget: 'select'
+        options: ['1', '2', '3', '4']
   - name: 'pages'
     label: 'Pages'
     folder: 'pages/_posts/'
@@ -76,13 +76,13 @@ collections:
     editor:
       preview: false
     files:
-      - name: 'general'
+      - name: 'home'
         label: 'Home'
         file: '_data/settings.json'
         fields:
           - { label: 'Site Title', name: 'site_title', widget: 'string' }
-          - label: 'Cover Image',
-            name: cover,
-            widget: image,
-            required: false,
+          - label: 'Cover Image'
+            name: 'cover'
+            widget: 'image'
+            required: false
 
