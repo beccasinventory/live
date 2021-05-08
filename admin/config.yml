@@ -39,3 +39,15 @@ collections:
         fields: 
           - {label: File, name: file, widget: image, media_folder: 'images/'}
           - {label: Caption, name: caption, widget: text, required: false}
+  - name: 'settings'
+    label: 'Settings'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: 'general'
+        label: 'Site Settings'
+        file: '_data/settings.json'
+        description: 'General Site Settings'
+        fields:
+          - { label: 'Global title', name: 'site_title', widget: 'string' }
