@@ -59,16 +59,17 @@ collections:
         options: ["1", "2", "3", "4"]
   - name: 'pages'
     label: 'Pages'
+    folder: 'pages/_posts/'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
-    files:
-      - label: 'My Links'
-        name: 'my-links'
-        file: 'my-links.md'
-        fields:
-          - { label: 'Title', name: 'title', default: 'my-links' }
-          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'page' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'pages' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'settings'
     label: 'Settings'
     delete: false # Prevent users from deleting documents in this collection
