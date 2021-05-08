@@ -19,7 +19,7 @@ collections:
       - { label: 'Category', name: 'category', widget: 'hidden', default: 'notebook' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Text', name: 'text', widget: 'markdown' }
   - name: 'camera-roll'
     label: 'Camera Roll'
     folder: 'camera-roll/_posts/'
@@ -32,8 +32,8 @@ collections:
       - { label: 'Category', name: 'category', widget: 'hidden', default: 'camera-roll' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - label: "Gallery"
-        name: "galleryImages"
+      - label: "Images"
+        name: "images"
         widget: "list"
-        summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        field: {label: File, name: file, widget: image}
+        field: {label: Caption, name: caption, widget: text}
