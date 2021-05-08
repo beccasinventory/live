@@ -81,14 +81,8 @@ collections:
         file: '_data/settings.json'
         fields:
           - { label: 'Site Title', name: 'site_title', widget: 'string' }
-          - label: 'Home Page'
-            name: home
-            widget: 'object'
-            fields:
-              - {
-                  label: 'Cover Image',
-                  name: cover,
-                  widget: image,
-                  required: false,
-                }
-              - { label: 'Special', name: special, widget: 'code', required: false }
+          - label: 'Cover Image',
+            name: cover,
+            widget: image,
+            required: false,
+
