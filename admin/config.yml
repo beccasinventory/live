@@ -85,4 +85,5 @@ collections:
             name: 'cover'
             widget: 'image'
             required: false
+          - { label: 'Spcieal Message', name: 'message', widget: 'string' }
 
