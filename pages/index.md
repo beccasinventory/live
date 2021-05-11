@@ -1,4 +1,5 @@
 ---
-layout: default
+layout: collection
 title: 'Pages'
+exclude: true
 ---

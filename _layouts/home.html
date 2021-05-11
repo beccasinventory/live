@@ -3,24 +3,33 @@ layout: default
 ---
 <main id="home">
     <header>
-        Becca’s Inventory:
+        {{ site.data.settings.site_title }}:
     </header>
     <ul>
-        <li>1. <a href="notebook.html">Notebook</a></li>
-        <li>2. <a href="camera-roll.html">Camera Roll</a></li>
-        <li>3. <a href="saves.html">Saves</a></li>
-        <li>4. <a href="my-links.html">My Links</a></li>
+        {% assign i = 1 %}
+        {% assign sorted = site.html_pages | sort: 'order' %}
+        {% for page in sorted %}
+            {% unless page.exclude %}
+                <li>{{ i }}. <a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% assign i = i | plus:1 %}
+            {% endunless %}
+        {% endfor %}
+        {% for post in site.posts %}
+            {% if post.categories contains 'pages' %}
+                <li>{{ i }}. <a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% assign i = i | plus:1 %}
+            {% endif %}
+        {% endfor %}
     </ul>
     <div id="canvas-wrap">
         <canvas id="canvas">
         </canvas>
     </div>
     <figure>
-        <img src="assets/imgs/happy-bday-ff.jpg">
-        <!-- <img src="assets/imgs/IMG_4945.JPG"> -->
+        <img src="{{site.data.settings.cover}}">
     </figure>
     <footer>
-        <p>i will update you when i can...</p>
+        <p>{{site.data.settings.message}}</p>
     </footer>
 </main>
 <!-- CLOCK SCRIPT -->

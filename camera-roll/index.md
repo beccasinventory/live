@@ -1,4 +1,5 @@
 ---
-layout: default
+layout: collection
 title: 'Camera Roll'
+order: 2
 ---
