@@ -7,12 +7,14 @@ layout: default
     </header>
     <ul>
         {% assign i = 1 %}
-        {% assign sorted = site.html_pages | sort: 'order' %}
+        {% assign sorted = site.pages | sort: 'order' %}
         {% for page in sorted %}
-            {% unless page.exclude %}
-                <li>{{ i }}. <a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% assign i = i | plus:1 %}
-            {% endunless %}
+            {% if page.title and page.autogen == nil %}
+                {% unless page.exclude %}
+                    <li>{{ i }}. <a href="{{ site.url }}/{{ page.category }}">{{ page.title }}</a></li>
+                    {% assign i = i | plus:1 %}
+                {% endunless %}
+            {% endif %}
         {% endfor %}
         {% for post in site.posts %}
             {% if post.categories contains 'pages' %}
