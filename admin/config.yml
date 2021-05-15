@@ -39,7 +39,7 @@ collections:
         widget: 'list'
         add_to_top: true
         fields: 
-          - {label: File, name: file, widget: image, media_folder: 'images/'}
+          - {label: File, name: file, widget: image, media_folder: '/assets/uploads/camera-roll'}
           - {label: Caption, name: caption, widget: text, required: false}
   - name: 'saves'
     label: 'Saves'
@@ -53,7 +53,7 @@ collections:
       - { label: 'Category', name: 'category', widget: 'hidden', default: 'saves' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - {label: Image, name: image, widget: image, media_folder: 'images/'}
+      - {label: Image, name: image, widget: image, media_folder: '/assets/uploads/saves'}
       - {label: Caption, name: caption, widget: text, required: false}
       - label: 'Size'
         name: 'size'

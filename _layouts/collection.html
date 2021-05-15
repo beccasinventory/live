@@ -21,7 +21,7 @@ layout: default
             {% else if post.category == 'camera-roll' %}
                 {% for image in post.images %}
                     <figure>
-                        <img src="/static/media_folder/{{ image.file }}>
+                        <img src="/camera-roll/{{ image.file }}>
                     </figure>
                 {% endfor %}
             {% else if post.category == 'saves' %}
