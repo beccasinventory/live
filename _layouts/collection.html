@@ -5,7 +5,7 @@ layout: default
 <div class="return-home">
     &lt;&lt; <a href="{{ site.url }}">Home</a>
 </div>
-<main id="notebook">
+<main id="{{page.category}}">
     <header>
         {{ page.title }}
     </header>
@@ -19,19 +19,29 @@ layout: default
                     {{ post.content }}
                 </div>
             {% else if post.category == 'camera-roll' %}
-                camera-roll
+                {% for image in post.images %}
+                    <figure>
+                        <img src="/static/media_folder/{{ image.file }}>
+                    </figure>
+                {% endfor %}
             {% else if post.category == 'saves' %}
                 saves
             {% else %}
-                {{ post.title }}
-                {{ post.content }}
+                <div class="entry">
+                    {{ post.title }}
+                    {{ post.content }}
+                </div>
             {% endif %}   
         {% endfor %}
     </div>
-    <div id="newer">
-        <p>&lt; <a href="{{ paginator.previous_page_path }}">newer</a></p>
-    </div>
-    <div id="older">
-        <p><a href="{{ paginator.next_page_path }}">older</a> &gt;</p>
-    </div>
+    {% if paginator.previous_page %}
+        <div id="newer">
+            <p>&lt; <a href="{{ paginator.previous_page_path }}">newer</a></p>
+        </div>
+    {% endif %}
+    {% if paginator.next_page %}
+        <div id="older">
+            <p><a href="{{ paginator.next_page_path }}">older</a> &gt;</p>
+        </div>
+    {% endif %}
 </main>

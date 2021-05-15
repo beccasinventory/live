@@ -6,12 +6,14 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: 'assets/uploads'
+site_url: https://beccasinventory.com
+
 collections:
   - name: 'notebook'
     label: 'Notebook'
     folder: 'notebook/_posts/'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}-{{time}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
@@ -24,7 +26,7 @@ collections:
     label: 'Camera Roll'
     folder: 'camera-roll/_posts/'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}-{{time}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
@@ -43,7 +45,7 @@ collections:
     label: 'Saves'
     folder: 'saves/_posts/'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}-{{time}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:

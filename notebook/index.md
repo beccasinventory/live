@@ -7,5 +7,5 @@ order: 1
 pagination:
   enabled: true
   category: 'notebook'
-  per_page: 1
+  per_page: 32
 ---

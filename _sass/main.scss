@@ -97,6 +97,14 @@ ul {
         margin-bottom: var(--base);
     }
 
+    .entry .date a {
+        text-decoration: none;
+    }
+
+.post_page #content {
+    margin-top: var(--base);
+}
+
 .span-one {
     grid-column: span 1;
 }

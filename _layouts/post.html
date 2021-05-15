@@ -2,18 +2,36 @@
 layout: default
 ---
 
-POST
-  {{ content }}
-
-  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
-  {% for year in postsByYear %}
-  <div class="archive-year">
-    {{ year.name }}
+<div class="return-home">
+  {% for parent in site.pages %}
+    {% if parent.title and parent.autogen == nil %}
+      {% unless parent.exclude %}
+        {% if parent.category == page.category %}
+            {% assign category_title = parent.title %}
+          {% endif %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  &lt;&lt; <a href="{{ site.url }}/{{ page.category }}">{{ category_title }}</a>
+</div>
+<main id="{{page.category}}" class="post_page">
+  <div id="content">
+    {% if page.category == 'notebook' %}
+      <div class="entry">
+        <div class="date">
+          {{ page.date | date: '%b %e, %Y @ %I:%M %p' | upcase }}
+        </div>
+        {{ page.content }}
+      </div>
+    {% else if page.category == 'camera-roll' %}
+      camera-roll
+    {% else if page.category == 'saves' %}
+      saves
+    {% else %}
+      <div class="entry">
+        {{ page.title }}
+        {{ page.content }}
+      </div>
+    {% endif %}
   </div>
-  {% for post in year.items %}
-  <li class="list-content">
-    <!-- add if post = page -->
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-  </li>
-  {% endfor %}
-  {% endfor %}
+</main>
