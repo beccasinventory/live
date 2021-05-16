@@ -5,7 +5,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 publish_mode: editorial_workflow
-media_folder: 'assets/uploads'
+media_folder: assets/uploads
 site_url: https://beccasinventory.com
 
 collections:
@@ -39,7 +39,7 @@ collections:
         widget: 'list'
         add_to_top: true
         fields: 
-          - {label: File, name: file, widget: image, media_folder: '/assets/uploads/camera-roll'}
+          - {label: File, name: file, widget: image}
           - {label: Caption, name: caption, widget: text, required: false}
   - name: 'saves'
     label: 'Saves'
