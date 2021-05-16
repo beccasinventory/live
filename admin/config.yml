@@ -39,7 +39,7 @@ collections:
         widget: 'list'
         add_to_top: true
         fields: 
-          - {label: File, name: file, widget: image}
+          - {label: File, name: file, widget: image, media_folder: /assets/uploads/camera-roll }
           - {label: Caption, name: caption, widget: text, required: false}
   - name: 'saves'
     label: 'Saves'
