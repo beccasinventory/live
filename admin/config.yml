@@ -58,7 +58,7 @@ collections:
       - label: 'Size'
         name: 'size'
         widget: 'select'
-        options: ['1', '2', '3', '4']
+        options: ['1', '2', '3', '4', '5', '6']
   - name: 'pages'
     label: 'Pages'
     folder: 'pages/_posts/'
@@ -83,6 +83,10 @@ collections:
         file: '_data/settings.yml'
         fields:
           - { label: 'Site Title', name: 'site_title', widget: 'string' }
+          - label: 'Favicon'
+            name: 'favicon'
+            widget: 'image'
+            required: false
           - label: 'Cover Image'
             name: 'cover'
             widget: 'image'

@@ -89,12 +89,26 @@ ul {
         object-fit: contain;
     }
 
-#map, #content {
+#content {
     grid-column: 2/span 3;
+}
+
+#saves #content {
+    grid-column: 1/span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-content: start;
+    gap: var(--base);
 }
 
     #content p, #content figure {
         margin-bottom: var(--base);
+    }
+
+    #content figcaption {
+        margin-top: 6px;
+        font-size: 11px;
+        line-height: 13px;
     }
 
     .entry .date a {
@@ -102,30 +116,30 @@ ul {
     }
 
 .post_page #content {
-    margin-top: var(--base);
+    padding-bottom: var(--base);
 }
 
-.span-one {
+.span-1 {
     grid-column: span 1;
 }
 
-.span-two {
+.span-2 {
     grid-column: span 2;
 }
 
-.span-three {
+.span-3 {
     grid-column: span 3;
 }
 
-.span-four {
+.span-4 {
     grid-column: span 4;
 }
 
-.span-five {
+.span-5 {
     grid-column: span 5;
 }
 
-.span-six {
+.span-6 {
     grid-column: span 6;
 }
 

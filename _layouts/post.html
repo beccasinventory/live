@@ -7,31 +7,50 @@ layout: default
     {% if parent.title and parent.autogen == nil %}
       {% unless parent.exclude %}
         {% if parent.category == page.category %}
-            {% assign category_title = parent.title %}
-          {% endif %}
+          {% assign return = parent.title %}
+          &lt;&lt; <a href="{{ site.url }}/{{ page.category }}">{{ return }}</a>
+        {% endif %}
       {% endunless %}
     {% endif %}
   {% endfor %}
-  &lt;&lt; <a href="{{ site.url }}/{{ page.category }}">{{ category_title }}</a>
+  {% if page.category == 'pages' %}
+    {% assign return = 'Home' %}
+    &lt;&lt; <a href="{{ site.url }}">{{ return }}</a>
+  {% endif %}
+  
 </div>
 <main id="{{page.category}}" class="post_page">
+  {% if page.category == 'pages' %}
+      {% assign header = page.title %}
+  {% else %}
+    {% assign header = page.date | date: '%b %e, %Y @ %I:%M %p' | upcase %}
+  {% endif %}
+  <header>
+    {{ header }}
+  </header>
   <div id="content">
     {% if page.category == 'notebook' %}
       <div class="entry">
-        <div class="date">
-          {{ page.date | date: '%b %e, %Y @ %I:%M %p' | upcase }}
-        </div>
         {{ page.content }}
       </div>
-    {% else if page.category == 'camera-roll' %}
-      camera-roll
-    {% else if page.category == 'saves' %}
-      saves
+    {% elsif page.category == 'camera-roll' %}
+        {% for image in page.images %}
+          <figure>
+            <img src="{{ image.file }}">
+            {% if image.caption %}
+              <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
+          </figure>
+      {% endfor %}
+    {% elsif page.category == 'saves' %}
+      <figure class="span-6">
+        <img src="{{ page.image }}">
+        {% if page.caption %}
+          <figcaption>{{ page.caption }}</figcaption>
+        {% endif %}
+      </figure>
     {% else %}
-      <div class="entry">
-        {{ page.title }}
-        {{ page.content }}
-      </div>
+      {{ page.content }}
     {% endif %}
   </div>
 </main>

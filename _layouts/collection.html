@@ -18,14 +18,16 @@ layout: default
                     </div>
                     {{ post.content }}
                 </div>
-            {% else if post.category == 'camera-roll' %}
+            {% elsif post.category == 'camera-roll' %}
                 {% for image in post.images %}
                     <figure>
-                        <img src="/camera-roll/{{ image.file }}>
+                        <a href="{{ post.url }}"><img src="{{ image.file }}"></a>
                     </figure>
                 {% endfor %}
-            {% else if post.category == 'saves' %}
-                saves
+            {% elsif post.category == 'saves' %}
+                <figure class="span-{{ post.size }}">
+                    <a href="{{ post.url }}"><img src="{{ post.image }}"></a>
+                </figure>
             {% else %}
                 <div class="entry">
                     {{ post.title }}
@@ -34,14 +36,14 @@ layout: default
             {% endif %}   
         {% endfor %}
     </div>
-    {% if paginator.previous_page %}
-        <div id="newer">
+    <div id="newer">
+        {% if paginator.previous_page %}
             <p>&lt; <a href="{{ paginator.previous_page_path }}">newer</a></p>
-        </div>
-    {% endif %}
-    {% if paginator.next_page %}
-        <div id="older">
+        {% endif %}
+    </div>
+    <div id="older">
+        {% if paginator.next_page %}
             <p><a href="{{ paginator.next_page_path }}">older</a> &gt;</p>
-        </div>
-    {% endif %}
+        {% endif %}
+    </div>
 </main>

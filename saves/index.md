@@ -7,5 +7,5 @@ order: 3
 pagination:
   enabled: true
   category: 'saves'
-  per_page: 1
+  per_page: 24
 ---
