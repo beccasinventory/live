@@ -25,4 +25,6 @@ Becca's Inventory is dedicated to KDX.
 
 Launch: May 16, 2021
 
+
+
 <a href="https://gossipsweb.net"><img src="https://gossipsweb.net/images/twwmwh-lime.jpg" alt="This website was made with hands." style="width: auto; height: 43px; border: 1px solid #000;" /></a>
