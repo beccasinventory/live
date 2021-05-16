@@ -7,8 +7,8 @@ layout: default
     </header>
     <ul>
         {% assign i = 1 %}
-        {% assign sorted = site.pages | sort: 'order' %}
-        {% for page in sorted %}
+        {% assign sorted_pages = site.pages | sort: 'order' %}
+        {% for page in sorted_pages %}
             {% if page.title and page.autogen == nil %}
                 {% unless page.exclude %}
                     <li>{{ i }}. <a href="{{ site.url }}/{{ page.category }}">{{ page.title }}</a></li>
@@ -16,7 +16,8 @@ layout: default
                 {% endunless %}
             {% endif %}
         {% endfor %}
-        {% for post in site.posts %}
+        {% assign sorted_posts = site.posts | sort: 'date' %}
+        {% for post in sorted_posts %}
             {% if post.categories contains 'pages' %}
                 <li>{{ i }}. <a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% assign i = i | plus:1 %}
