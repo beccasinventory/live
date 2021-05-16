@@ -1,5 +1,5 @@
 :root {
-  --base: 18px;
+  --base: 19px;
   --max: 1052px;
   --deep: rgb(42,41,42);
 }
@@ -28,7 +28,7 @@ body {
     margin-right: var(--base);
     font-family: Courier, monospace;
     font-size: 13px;
-    line-height: 18px;
+    line-height: var(--base);
     letter-spacing: 0.01em;
     color: var(--deep);
     -moz-text-size-adjust: 100%; 
