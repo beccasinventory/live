@@ -15,7 +15,7 @@ Resources:\
 • [Jekyll::Paginate V2](https://github.com/sverrirs/jekyll-paginate-v2/) (because I'm using multiple feeds, my system is dependent on this plugin for pagination of individual categories)\
 • [Installing Netlify CMS for Jekyll](https://www.netlifycms.org/docs/jekyll/)\
 • [Netlify CMS Widgets Documentation](https://www.netlifycms.org/docs/widgets)\
-• [](https://gist.github.com/jexchan/2351996#multiple-ssh-keys-settings-for-different-github-account)[Multiple SSH Keys for Different GitHub Accounts](https://gist.github.com/jexchan/2351996) (not essential, but I created a new GitHub account to store only this repository and so this article helped me figure out how to automatically authenticate into multiple accounts on a per-project level)
+• [](https://gist.github.com/jexchan/2351996#multiple-ssh-keys-settings-for-different-github-account)[Multiple SSH Keys for Different GitHub Accounts](https://gist.github.com/jexchan/2351996) (not essential, but I created a new GitHub account to store only this repository and so this article helped me figure out how to authenticate into multiple accounts on a per-project level)
 
 If you have questions, feel free to email me at: bee3s@pm.me
 
