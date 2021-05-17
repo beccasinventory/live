@@ -12,7 +12,7 @@ Resources:\
 • [Setup your Mac for development, 2020 edition](https://dev.to/v3frankie/setup-your-mac-for-development-2020-edition-1c8a) (slightly out of date, but a good introduction for beginners to get their basic code environment installed)\
 • [Jekyll Documentation](https://jekyllrb.com/docs/)\
 • [Create a Multi Blog Site with Jekyll](https://www.garron.me/en/blog/multi-blog-site-jekyll.html) (I am following this model of creating multiple feeds based on a structure of category folders)\
-• [Jekyll::Paginate V2](https://github.com/sverrirs/jekyll-paginate-v2/) (because I'm using multiple feeds, my system is dependent on this plugin)\
+• [Jekyll::Paginate V2](https://github.com/sverrirs/jekyll-paginate-v2/) (because I'm using multiple feeds, my system is dependent on this plugin for pagination of individual categories)\
 • [Installing Netlify CMS for Jekyll](https://www.netlifycms.org/docs/jekyll/)\
 • [Netlify CMS Widgets Documentation](https://www.netlifycms.org/docs/widgets)\
 • [](https://gist.github.com/jexchan/2351996#multiple-ssh-keys-settings-for-different-github-account)[Multiple SSH Keys for Different GitHub Accounts](https://gist.github.com/jexchan/2351996) (not essential, but I created a new GitHub account to store only this repository and so this article helped me figure out how to automatically authenticate into multiple accounts on a per-project level)
