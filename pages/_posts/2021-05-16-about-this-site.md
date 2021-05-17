@@ -19,7 +19,7 @@ Resources:\
 
 If you have questions, feel free to email me at: bee3s@pm.me
 
-This project wouldn't be possible without help from my friends. I am grateful to Ian G. for first introducing me to Netlify and the concept of a free website, j9 for so much but especially helping me overcome my fear of command line, fanfare for chat support and talking through ideas, Natalia P. for a fruitful conversation in April 2020, Will K. for agreeing to be my guinea pig, and Gordon F. and Elizaveta S. for their encouragement during the final steps of coding.
+This project wouldn't be possible without a lot help from my friends. I am so grateful to Ian G. for first introducing me to Netlify and the concept of a free website, j9 for everything but especially helping me overcome my fear of command line, fanfare for chat support and talking through ideas, Natalia P. for a fruitful conversation in April 2020, Will K. for agreeing to be my guinea pig, and Gordon F. and Elizaveta S. for their encouragement during the final steps of coding.
 
 Becca's Inventory is dedicated to KDX.
 
