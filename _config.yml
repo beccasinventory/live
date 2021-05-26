@@ -4,6 +4,7 @@ title: "" # the name of your site, e.g. ACME Corp.
 timezone: America/New_York
 
 plugins: [jekyll-paginate-v2]
+incremental: true
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
